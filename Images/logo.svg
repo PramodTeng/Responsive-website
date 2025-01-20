@@ -1,33 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="209" height="54" viewBox="0 0 209 54">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="60" viewBox="0 0 240 60">
   <defs>
-    <style>
-      .cls-1 {
-        fill: #2584ff;
-        stroke: #2584ff;
-      }
-
-      .cls-1, .cls-2 {
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 10px;
-        fill-rule: evenodd;
-      }
-
-      .cls-2 {
-        fill: #ff3400;
-        stroke: #ff3400;
-        mix-blend-mode: lighten;
-      }
-
-      .cls-3 {
-        font-size: 32.498px;
-        fill: #fff;
-        font-family: Inter;
-        font-weight: 700;
-      }
-    </style>
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5"/>
+      <stop offset="100%" style="stop-color:#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#EC4899" stop-opacity="0.6"/>
+      <stop offset="100%" style="stop-color:#F43F5E" stop-opacity="0.6"/>
+    </linearGradient>
   </defs>
-  <path id="Polygon_1_copy_2" data-name="Polygon 1 copy 2" class="cls-1" d="M43.851,29.7L24.244,39.2,32.037,14.02Z"/>
-  <path id="Polygon_1_copy_2-2" data-name="Polygon 1 copy 2" class="cls-2" d="M37.033,29.7L56.64,39.2,48.847,14.02Z"/>
-  <text id="Moshify" class="cls-3" transform="translate(71.466 35.437) scale(0.923)">Moshify</text>
+
+  <!-- Main P shape -->
+  <g transform="translate(20, 5)">
+    <!-- Vertical stem -->
+    <path d="M10,5 L10,45 L25,45 L25,5 Z" 
+          fill="url(#mainGradient)"/>
+    
+    <!-- P bowl - made shorter and more distinct -->
+    <path d="M25,5 
+             C45,5 50,8 50,20 
+             C50,32 45,35 25,35 
+             L25,25 
+             C35,25 38,23 38,20 
+             C38,17 35,15 25,15 Z" 
+          fill="url(#mainGradient)"/>
+    
+    <!-- Decorative elements -->
+    <circle cx="38" cy="20" r="3" fill="#ffffff" opacity="0.8"/>
+    <path d="M15,10 L20,10" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+    <path d="M15,40 L20,40" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Glow effect -->
+    <path d="M25,5 C45,5 50,8 50,20 C50,32 45,35 25,35" 
+          stroke="url(#glowGradient)" 
+          stroke-width="4" 
+          fill="none" 
+          opacity="0.5"/>
+  </g>
+
+  <!-- Company name -->
+  <text x="85" y="38" 
+        font-family="'Open Sans', Arial, sans-serif" 
+        font-size="28" 
+        font-weight="600" 
+        fill="#ffffff" 
+        letter-spacing="1">
+    PROMIFY
+  </text>
 </svg>
